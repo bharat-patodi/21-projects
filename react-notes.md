@@ -18,7 +18,8 @@
     refs
     controlled input
     uncontrolled input
-    lazy state initialization
+    lazy state initialization: https://kentcdodds.com/blog/use-state-lazy-initialization-and-function-updates
+    custom hook
 
 
 - React Hooks
