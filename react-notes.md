@@ -25,14 +25,31 @@
 - React Hooks
 A large list of built-in hooks:
   1. useState
+    - useState is a function that returns an array with 2 elements
+    - used for updating state
+    - useful for re-rendering a component when the state changes
+    - common mistakes include not using the previous state when updating state || not using the updater function
+    - implementing my own useState hook
+    ```javascript
+    function useState(initialValue) {
+      let _val = initialValue;
+      function setState(newVal) {
+        _val = newVal;
+      }
+      return [_val, setState];
+    }
+    ```
+
   2. useEffect
+   - useEffect is useful for localStorage, timers, subscriptions, etc.
+   - A dependency list is useful because it allows you to specify when the effect should be run and stop it from running unnecessarily
   3. useContext
   4. useReducer
   5. useRef
   6. useCallback
   7. useMemo
   8. useImperativeHandle
-  9. useLayoutEffect
+  9.  useLayoutEffect
   10. useDebugValue
   11. useTransition
   12. useDeferredValue
@@ -54,6 +71,9 @@ A large list of built-in hooks:
   28. useTransition
   29. useMutableSource
   30. useOpaqueIdentifier
+
+A good read about implementation of the hooks:
+- https://medium.com/@ryardley/react-hooks-not-magic-just-arrays-cd4f1857236e
 
 
 ## Project 01
